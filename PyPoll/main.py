@@ -28,6 +28,7 @@ with open (csvpath, newline='') as csvfile:
             index = Voted_candidates.index(x[-1])
             votes[index] += 1
         Votes_count += 1
+    print('-------------------------------')
     print('TOTAL VOTES')
     print(Votes_count)
 
@@ -50,3 +51,18 @@ with open (csvpath, newline='') as csvfile:
     winner=Voted_candidates[z]
     print('WINNER')
     print(winner)
+
+# Print analysis results to terminal
+    print('-------------------------------')
+    print('')
+    print('Election Results')
+    print('-------------------------------')
+    print(('Total Votes: ') + str(Votes_count))
+    print('-------------------------------')
+    print(str(Voted_candidates[0]) + ': ' + str(Votes_share[0]) + '% ' + '(' + str(votes[0]) + ')')
+    print(str(Voted_candidates[1]) + ': ' + str(Votes_share[1]) + '% ' + '(' + str(votes[1]) + ')')
+    print(str(Voted_candidates[2]) + ': ' + str(Votes_share[2]) + '% ' + '(' + str(votes[2]) + ')')
+    print(str(Voted_candidates[3]) + ': ' + str(Votes_share[3]) + '% ' + '(' + str(votes[3]) + ')')
+    print('-------------------------------')
+    print(('Winner: ') + (winner))
+    print('-------------------------------')
