@@ -43,3 +43,10 @@ with open (csvpath, newline='') as csvfile:
     print(Votes_share)
     print("TOTAL VOTES")
     print(votes)
+
+# Print the winner based on popular vote
+    Winner_votes = max(votes)
+    z = votes.index(Winner_votes)
+    winner=Voted_candidates[z]
+    print('WINNER')
+    print(winner)
