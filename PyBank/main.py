@@ -52,10 +52,14 @@ with open (csvpath) as csvfile:
     # Calculate the greatest increase in profits (date and amount) over the entire period
     Greatest_increase = max(Change)
     print(Greatest_increase)
+    i = Change.index(Greatest_increase)
+    GI_month = Months_count [i + 1]
 
     # Calculate he greatest decrease in losses (date and amount) over the entire period  
     Greatest_decrease = min(Change)
     print(Greatest_decrease)
+    d = Change.index(Greatest_decrease)
+    GD_month = Months_count [d + 1]
 
     #Print the analysis to the terminal
     print ('')
@@ -65,9 +69,9 @@ with open (csvpath) as csvfile:
     print(f'Total: ${Total}')
     print(f'Average Change: ${Average_Change}')
     print(f'Greatest Increase in Profits:')
-    print(f'(${Greatest_increase})')
+    print(f'{GI_month} (${Greatest_increase})')
     print(f'Greatest Decrease in Profits:')
-    print(f'(${Greatest_decrease})')    
+    print(f'{GD_month} (${Greatest_decrease})')    
 
 
     #Export a text file with the results
