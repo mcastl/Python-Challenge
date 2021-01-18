@@ -11,14 +11,9 @@ with open (csvpath, newline='') as csvfile:
 #CSV reader specifies delimiter and variable that holds contents
     csvreader = csv.reader (csvfile, delimiter = ',')
 
-#Read the header row first
-    #csv_header = next(csvreader)
-    #print(f'CSV Header: \n{csv_header}')
-        
 # Add new variables
     Votes_count = 0
     votes = []
-    Candidate_names = []
     Voted_candidates = []
     Votes_share = []
     Winner = " "
@@ -34,11 +29,17 @@ with open (csvpath, newline='') as csvfile:
             votes[index] += 1
         Votes_count += 1
     print('TOTAL VOTES')
-    print(str(Votes_count))
+    print(Votes_count)
 
 #List voted candidates
     print('VOTED CANDIDATES')
-    print(str(Voted_candidates[0]))
-    print(str(Voted_candidates[1]))
-    print(str(Voted_candidates[2]))
-    print(str(Voted_candidates[3]))
+    print(Voted_candidates)
+
+# Compute the percentage of votes each candidate got
+    for y in votes:
+        shares = '{0:.3f}'.format(round((y/Votes_count)*100,2))
+        Votes_share.append(shares)
+    print('SHARE OF VOTES')
+    print(Votes_share)
+    print("TOTAL VOTES")
+    print(votes)
