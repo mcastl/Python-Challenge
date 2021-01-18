@@ -1,5 +1,5 @@
-# python-challenge
-Python scripts for analyzing financial records.
+# Python-Challenge
+This small Python project cosists in two scripts for analyzing records, one for finance and the other one for elections.
 
 ## Table of contents
 * [PyBank](#PyBank)
@@ -18,7 +18,7 @@ PyBank: Creating a Python script for analyzing the financial records of a compan
   Greatest Decrease in Profits: Sep-2013 ($-2196167)
   ```
 
-PyPoll: create a Python script that analyzes the votes and analyze the results.
+PyPoll: create a Python script that analyzes the votes and analyze the election results.
   
   ```text
   Election Results
@@ -46,4 +46,4 @@ To-do list:
 Project is: _finished_, _subject to improvement_.
 
 ## Inspiration
-Project based on Data Analytics BootCamp Homeworks
+Project based on Data Analytics BootCamp homeworks. It is the first of many efforts for me to learn Python, and for pursuing my greater goal of becoming a Data Scientist.
