@@ -46,7 +46,7 @@ with open (csvpath) as csvfile:
         Monthly_change = int(New_value - Old_value)
         Change.append(Monthly_change)
     Change_total = sum(Change)
-    Average_Change = Change_total / len(Change)
+    Average_Change = round(Change_total / len(Change), 2)
     print(Average_Change)
 
     # Calculate the greatest increase in profits (date and amount) over the entire period
@@ -56,3 +56,18 @@ with open (csvpath) as csvfile:
     # Calculate he greatest decrease in losses (date and amount) over the entire period  
     Greatest_decrease = min(Change)
     print(Greatest_decrease)
+
+    #Print the analysis to the terminal
+    print ('')
+    print('Financial Analysis')
+    print('-----------------------')
+    print(f'Total Months: {len(Months_count)}')
+    print(f'Total: ${Total}')
+    print(f'Average Change: ${Average_Change}')
+    print(f'Greatest Increase in Profits:')
+    print(f'(${Greatest_increase})')
+    print(f'Greatest Decrease in Profits:')
+    print(f'(${Greatest_decrease})')    
+
+
+    #Export a text file with the results
