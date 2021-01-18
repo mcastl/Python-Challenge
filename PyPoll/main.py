@@ -3,7 +3,6 @@ import os
 
 # Import Module for reading CSV files
 import csv
-
 csvpath = os.path.join('PyPoll', 'Resources', 'election_data.csv')
 
 # Improved CSV file
@@ -34,29 +33,12 @@ with open (csvpath, newline='') as csvfile:
             index = Voted_candidates.index(x[-1])
             votes[index] += 1
         Votes_count += 1
+    print('TOTAL VOTES')
     print(str(Votes_count))
 
-    for y in votes:
-        shares = '{0:.3f}'.format(round((y/Votes_count)*100,2))
-        Votes_share.append(shares)
-    
-    winner_index = Votes_share.index(max(Votes_share))
-    winner = Voted_candidates[winner_index]
-
-# Print results on terminal
-    print('')
-    print('Election results')
-    print('------------------------')
-    print('Total votes: ' + str(Votes_count))
-    
-
-# List cadidates who received votes
-        #Voted_candidates.append(row[2])
-
-# Compute the percentage of votes each candidate got
-
-# Compute the total number of votes each candidate got
-
-# Print the winner of the election based on popular vote
-
-# Export text file with results
+#List voted candidates
+    print('VOTED CANDIDATES')
+    print(str(Voted_candidates[0]))
+    print(str(Voted_candidates[1]))
+    print(str(Voted_candidates[2]))
+    print(str(Voted_candidates[3]))
