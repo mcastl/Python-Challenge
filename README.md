@@ -1,5 +1,5 @@
 # Python-Challenge
-This small Python project cosists in two scripts for analyzing records, one for finance and the other one for elections.
+This small Python project consists in two scripts for analyzing records, one for finance and the other one for elections.
 
 ## Table of contents
 * [PyBank](#PyBank)
