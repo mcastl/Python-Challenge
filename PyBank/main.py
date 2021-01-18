@@ -74,3 +74,15 @@ with open (csvpath) as csvfile:
     print(f'{GD_month} (${Greatest_decrease})')    
 
     #Export a text file with the results
+    f = open('PyBank.txt', 'w')
+    f.write('Financial Analysis')
+    f.write('-----------------------------')
+    f.write(f'Total Months: {len(Months_count)}')
+    f.write(f'Total: ${Total}')
+    f.write(f'Average Change: ${Average_Change}')
+    f.write(f'Greatest Increase in Profits:')
+    f.write(f'{GI_month} (${Greatest_increase})')
+    f.write(f'Greatest Decrease in Profits:')
+    f.write(f'{GD_month} (${Greatest_decrease})')  
+    f.close ()
+        
