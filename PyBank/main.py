@@ -64,7 +64,7 @@ with open (csvpath) as csvfile:
     #Print the analysis to the terminal
     print ('')
     print('Financial Analysis')
-    print('-----------------------')
+    print('-----------------------------')
     print(f'Total Months: {len(Months_count)}')
     print(f'Total: ${Total}')
     print(f'Average Change: ${Average_Change}')
@@ -72,6 +72,5 @@ with open (csvpath) as csvfile:
     print(f'{GI_month} (${Greatest_increase})')
     print(f'Greatest Decrease in Profits:')
     print(f'{GD_month} (${Greatest_decrease})')    
-
 
     #Export a text file with the results
