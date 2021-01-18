@@ -50,5 +50,9 @@ with open (csvpath) as csvfile:
     print(Average_Change)
 
     # Calculate the greatest increase in profits (date and amount) over the entire period
+    Greatest_increase = max(Change)
+    print(Greatest_increase)
 
     # Calculate he greatest decrease in losses (date and amount) over the entire period  
+    Greatest_decrease = min(Change)
+    print(Greatest_decrease)
